@@ -2,15 +2,17 @@ import { createStore } from "redux"
 
 import { SET_MAP, ADD_ARTICLE } from "./constants/action-types";
 
+import { Map } from "./components/Map"
+
 const initialState = {
-    currentMap: "asd",
+    currentMap: new Map(20, 30),
     articles: []
 }
 
 const gameState = (state = initialState, action) => {
     switch (action.type) {
         case SET_MAP:
-            state.currentMap = "foo"
+            state.currentMap = action.payload
             return state
         case ADD_ARTICLE:
             return { ...state, articles: [...state.articles, action.payload] }

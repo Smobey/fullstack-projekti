@@ -1,24 +1,15 @@
 import React from "react"
 import { connect } from "react-redux"
 
-import { Map } from "./Map"
 import Render from "./Render"
-import { addArticle } from "../actions/index"
+import { setMap } from "../actions/index"
 
-import Form from "./Form";
-
-class Game extends React.Component {
-    constructor() {
-        super();
-        this.map = new Map(20, 30)
-        console.log(this.props)
-      }
-
+class Game extends React.Component {    
     render() {
+        console.log(this.props)
         return (
             <div className="gameField">
-                <Render map={this.map}/>
-                <Form />
+                <Render map={this.props.currentMap}/>
             </div>
         )
     }
@@ -26,14 +17,13 @@ class Game extends React.Component {
 
 const mapStateToProps = state => {
     return { 
-        articles: state.articles,
         currentMap: state.currentMap 
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        addArticle: article => dispatch(addArticle(article))
+        setMap: currentMap => dispatch(setMap(currentMap))
     }
 }
 
