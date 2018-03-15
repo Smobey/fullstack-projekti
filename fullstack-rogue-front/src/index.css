@@ -1,5 +1,17 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.gameField {
+  white-space: pre-line;
+  display: inline-block;
+
+  font-family: monospace;
+  color: white;
+  background-color: black;
+
+  line-height: 1.2em;
+  letter-spacing: 0.6em;
 }
