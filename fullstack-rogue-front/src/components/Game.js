@@ -7,16 +7,21 @@ import { addArticle } from "../actions/index"
 
 import Form from "./Form";
 
-const Game = ({ currentMap, articles }) => {
-    const map = new Map(20, 30)
-    console.log(addArticle)
-    console.log(articles)
-    return (
-        <div className="gameField">
-            <Render map={map}/>
-            <Form />
-        </div>
-    )
+class Game extends React.Component {
+    constructor() {
+        super();
+        this.map = new Map(20, 30)
+        console.log(this.props)
+      }
+
+    render() {
+        return (
+            <div className="gameField">
+                <Render map={this.map}/>
+                <Form />
+            </div>
+        )
+    }
 }
 
 const mapStateToProps = state => {
