@@ -1,4 +1,4 @@
-import React from 'react'
+import { connect } from "react-redux"
 
 export class Map {
     constructor(gameWindowHeight, gameWindowWidth) {
@@ -27,4 +27,10 @@ export class Map {
     }
 }
 
-export default Map
+const mapStateToProps = (state) => {
+    return {
+        gameState: state.gameState
+    }
+}
+  
+export default connect(mapStateToProps)(Map)

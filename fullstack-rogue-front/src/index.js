@@ -1,11 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Game from './components/Game'
-import { createStore } from 'redux'
+import React from "react"
+import ReactDOM from "react-dom"
+import { Provider } from "react-redux"
 
-import './index.css'
+import gameState from "./gameState"
+import Game from "./components/Game"
+
+import "./index.css"
 
 ReactDOM.render(
-    <Game />,
-    document.getElementById('root')
+    <Provider store={ gameState }>
+        <Game />
+    </Provider>,
+
+    document.getElementById("root")
 )
