@@ -1,4 +1,3 @@
-# fullstack-projekti
-Jonkinmuotoinen Areena-klooni. Selaimella pelattava vuoropohjainen strategia.
+# nothing to see here
+enpä ikinä ehtinyt aloittaa mitään kunnolla
 
-Katsotaan miten menee.
